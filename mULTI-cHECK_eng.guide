@@ -1,0 +1,648 @@
+@database mULTI-cHECK
+@master EWORK:mULTI-cHECK/mULTI-cHECK_eng.guide
+@$VER: mULTI-cHECK.guide 1.6 (05-09-03)
+@author "Sascha 'SieGeL/tRSi' Pfalz"
+@(c) "Copyright © 1996-2003 by Sascha 'SieGeL/tRSi' Pfalz"
+@wordwrap
+@index HeddleyAutoIndex
+@remark Created with Heddley v1.1 (c) Edd Dumbill 1994
+@remark Heddley Bugs Fixed with FixHeddley 1.2 (c) 1995 by David Zvekic
+
+@node "Main" "mULTI-cHECK - Archive-Checker for FAME & Amiex Systems"
+
+    @{b}:::.@{ub}       ________  _________ ____
+    @{b}::::@{ub}      |  -___ /_(____-----(____)
+    @{b}`::: ...@{ub}  `---' `---^---------^----^
+     @{b}:::::::'@{ub}
+    @{b}.::::'      ..@{ub}             __ _ _ _ _ ___ _ _ ___ ___  _ ___ _ _
+   @{b}::::::.     `:::::...@{ub}      (__) ` | ` | - | / | - (_ _)(_) - | ` |
+    @{b}`' :::        ```:::::..@{ub}  ^--^-'-^-'-^---^---^-'-'`-' ^-^---^-'-'
+       @{b}`:::            ``::::@{ub}
+        @{b}`:::          ..::::'@{ub}           .@{b}presents in 2003@{ub}.
+         @{b}`:::.    ..:::::''@{ub}
+          @{b}`:::::::::::''@{ub}                .@{b}mULTI-cHECK  v1.6@{ub}.
+            @{b}``::::''@{ub}
+                                       .@{b}for FAME, /X or CLI@{ub}.
+
+
+
+
+
+
+                          wRITTEN bY SieGeL/tRSi
+
+                         @{"COPYRIGHT & DISTRIBUTION" link "COPYRIGHT" 0}
+                         @{"INTRODUCTION & FEATURES " link "INTRODUCTION" 0}
+                         @{"INSTALLATION TO YOUR BBS" link "INSTALLATION" 0}
+                         @{"  USAGE AND PARAMETERS  " link "USAGE" 0}
+                         @{"  CREDITS & GREETINGS!  " link "CREDITZ" 0}
+
+@endnode
+
+@node "COPYRIGHT" "Copyright Informations for mULTI-cHECK"
+@{b}DISTRIBUTION:@{ub}
+
+ Following notice applies to product called "mULTI-cHECK" and everything 
+ in its original distribution archive.
+
+ * Program is published by Sascha 'SieGeL/tRSi' Pfalz under concept of FREEWARE.
+   No warranties are given. I take no responsibility of any possible
+   harm this product could do to your amiga system (not that it would but..).
+
+ * You may NOT sell this product without permission from me.
+
+ * Program must not be altered in any way.
+
+ * Package must always be kept intact when spreading.
+
+ * It is OK to include this on CD-ROM & disk collections and distribute
+   it through aminet and other such ftp's and file nets.
+
+ Above mentioned rules apply to mULTI-cHECK and other texts or
+ libraries within the original package versions 1.6 and newer unless
+ otherwise stated.
+@endnode
+
+@node "INTRODUCTION" "Some informations about mULTI-cHECK"
+          @{b}INTRODUCTION TO mULTI-cHECK OR WHY ANOTHER FILECHECKER ?@{ub}
+
+ Wow, almost 6 years have gone since I last updated this tool :) It was a little
+ bit hard to get into Amiga-E again, but now the update is finished.
+
+ The original statement I've written here in 1997 is no longer true, so I decided
+ to write a new one. BBS systems are very rare in these days, but it seems to get
+ back "to the roots", as many of the old-school members I know from the past days
+ are visiting again BBS systems, and so does Digiman with his FAME driven BBS. He's
+ also responsible for this V1.6 update :)
+
+ Hope to meet you all again on the AmigaOne Platform, which is my next aimed target!
+
+ But now let's go to the usual program docs stuff:
+
+ @{u}Main features of mULTI-cHECK are:@{uu}
+
+ - Supports @{b}LZX@{ub}, @{b}LHA@{ub} & @{b}ZIP@{ub} Archives for @{b}testing/adding/stripping@{ub}...
+
+ - V1.3+ supports now also @{b}Textfile adding with Header/Tailer !@{ub}
+
+ - Full @{b}argument-driven@{ub}, no external configfile needed!
+
+ - Supports @{b}FAME@{ub} & @{b}Amiex@{ub} systems (but not needed to let it work)
+
+ - Is able to add @{b}Uploadername@{ub}, -@{b}location@{ub}, @{b}node@{ub}, @{b}date@{ub} & @{b}time@{ub} of upload to
+   the advert/header/tailer being added....
+
+ - Supports @{b}stripping via external Textfile@{ub}
+
+ - Very small and fast...:)
+
+ - V1.6+ supports now abbrevations of all arguments and a new mode called NOMODIFY
+   is also added to support binary adverts...
+
+ If you now interested in this checker, simply take a look to the chapter
+ @{"Installation" link "INSTALLATION" 0} for further informations...
+@endnode
+
+@node "INSTALLATION" "Installation to your BBS-System of mULTI-cHECK"
+                       @{b}INSTALLATION OF mULTI-cHECK@{ub}
+
+ Best way to copy all neccessary files is to use the Installerscript supplied
+ with the release archive...if you want to copy it by hand, follow these few
+ steps:
+
+ @{b}1.@{ub} Copy @{fg shine}mULTI-cHECK@{fg text} to your @{fg fill}c:@{fg text} directory or to any other directory of your
+    choice.
+
+ @{b}2.@{ub} Copy the @{fg shine}documentation@{fg text} to your docs-directory or any other directory...
+
+ @{b}3.@{ub} Copy the supplied sample files @{"ADVERT.TXT" link "SAMPLE_ADVERT" 0} and @{"STRIPFILE.TXT" link "SAMPLE_STRIPFILE" 0} to a
+    directory of your choice. You may also copy @{fg shine}HEADER.TXT@{fg text} and @{fg shine}TAILER.TXT@{fg text} as
+    examples how to use the TextAdding feature!
+
+ Now you have to edit the files @{b}ADVERT.TXT@{ub} and @{b}STRIPFILE.TXT@{ub} to your needs.
+ ADVERT.TXT could have some special symbols which are described @{"HERE" link "SAMPLE_ADVERT" 0}.
+ Also the HEADER.TXT file could contain these symbols, they are exactly the
+ same like inside the ADVERT.TXT file. See there for further informations.
+ The STRIPFILE.TXT should contain all filenames (!), you wish to kill from 
+ the archive. Please note that it's on you to write only legal characters 
+ into this file, as mULTI-cHECK performs @{b}*NO*@{ub} checkings on these
+ names !!! So make sure that you don't use wildcards or other critical 
+ filenames inside this @{"stripfile" link "SAMPLE_STRIPFILE" 0}, otherwise it could happen that 
+ you gain only empty archives or other strange things...you've been warned!
+
+ At least, you have to built in the checker to your BBS-System.
+
+
+                   @{b}--------- BBS-INSTALLATION ---------@{ub}
+
+
+@{u}AMIEX-SYSOPS:@{uu}
+
+ Create four icons inside your BBS:FCHECK/ directory called
+
+                            @{fg shine}LZX.INFO@{fg text}
+                            @{fg shine}LHA.INFO@{fg text}
+                            @{fg shine}ZIP.INFO@{fg text}
+                            @{fg shine}TXT.INFO@{fg text}
+
+ and edit the Tooltypes like shown below:
+
+  CHECKER = C:mULTI-cHECK
+  OPTIONS = @{"(CLICK HERE FOR OPTIONS)" link "USAGE" 0}
+    STACK = SAME
+ PRIORITY = 1
+  ERROR.1 = Archive Corrupt!
+
+ Repeat this steps for all four icons (or only the file-types you want
+ to use mULTI-cHECK for)...the Options are described in the @{"Parameters" link "USAGE" 0}-
+ chapter, see there for further informations !
+
+ Now you are ready with the installation.
+
+
+@{u}FAME-SYSOPS@{uu}:
+
+ Start the System-Editor and go to FileCheckers. Now edit the @{b}LHA@{ub}, @{b}ZIP@{ub}
+ and TXT configurations like shown below:
+
+  CHECKER PATH = C:mULTI-cHECK
+    STACK SIZE = 4096
+      PRIORITY = 1
+       OPTIONS = @{"(CLICK HERE FOR OPTIONS)" link "USAGE" 0}
+       ERROR 1 = Archive Corrupt!
+
+ For @{b}LZX@{ub}, you have the create a new configuration with the @{fg shine}NEW@{fg text} button, enter
+ LZX as extension, fill in the fields and save this configuration.
+
+ Of course you have to switch the checker(s) to @{b}ON@{ub} to let it work :)
+
+ That's all for installing it to @{"FAME" link "FAME" 0}, now you are ready to use it. See
+ Chapter @{"Parameters" link "USAGE" 0} for further informations about the Options used by
+ mULTI-cHECK.
+@endnode
+
+@node "USAGE" "How to use it and list of Parameters"
+                   @{b}LIST OF PARAMETERS USED BY mULTI-cHECK:@{ub}
+
+ As mULTI-cHECK is fully commandline-driven, various parameters exists to
+ control mULTI-cHECK. The command-template for mULTI-cHECK is:
+
+ @{fg shine}ADVERT=AD/K,BBS-PATH=BBS/K,STRIPFILE=SF/K,PACKER=P/K,TYPE=T/K/A,TAILER=TA/K,NOMODIFY=NOM/S,FILENAME/A@{fg text}
+
+ Click @{"HERE" link "USAGE_EXAMPLES" 0} for some examples how to start mULTI-cHECK.
+
+ @{u}Explanation of Parameters:@{uu}
+
+ mULTI-cHECK uses standard OS 2.0++ Parms and their keywords, so please take
+ a look to your AmigaDOS-Manual for further informations about the templates
+ of programs etc.
+
+    @{fg shine}@{bg shadow}ADVERT=AD/K@{fg text}@{bg back}  -  Specify here the Filename to the advert which should be
+                    added to the archive...click @{"HERE" link "SAMPLE_ADVERT" 0} for additional infos
+                    about the format of adverts used by mULTI-cHECK.
+
+                    @{b}@{fg fill}I.E.:@{ub}@{fg text} @{fg fill}ADVERT=S:MYADVERT.TXT@{fg text}
+
+                    will add @{fg fill}S:MYADVERT.TXT@{fg text} after parsing it for any special
+                    commands to the archive given as FileName.
+
+                    When using the Textmode, you have to enter here the path to
+                    the HEADER file which should be added above the original
+                    textfile.
+
+                    This Parameter is optional!
+
+    @{fg shine}@{bg shadow}TAILER=TA/K@{fg text}@{bg back}  -  This Parameter is only required when using mULTI-cHECK in
+                    Textmode. Here you may specify the Tailer file which will
+                    be added below the textfile. In all other modes this
+                    parameter is not required.
+
+ @{fg shine}@{bg shadow}BBS-PATH=BBS/K@{fg text}@{bg back}  -  If you are using mULTI-cHECK with a BBS, enter here the
+                    main path to your BBS System, i.e. @{fg fill}BBS-PATH=BBS:@{fg text} or use
+                    @{fg fill}BBS-PATH=FAME:@{fg text} . Please notice that mULTI-cHECK is able to
+                    detect itself which System you are running...if you don't
+                    specify this Option, but using the Uploader-Name etc.
+                    features inside an advert, mULTI-cHECK will write
+                    @{b}"-+- The SysOp -+- "@{ub} and @{b}"- Local Upload -"@{ub} for the name &
+                    location fields, otherwise all needed informations where
+                    extracted from the online's user.datas and written to your
+                    advert.
+
+                    This Parameter is optional!
+
+ @{fg shine}@{bg shadow}STRIPFILE=SF/K@{fg text}@{bg back}  -  Here you have to enter the path to a ascii-file containing
+                    all filenames you want to strip off the archive, i.e. you
+                    have a file in @{fg fill}S:@{fg text} called @{fg fill}strips@{fg text} containing:
+
+                                @{i}display.me@{ui}
+                                @{i}fuck_it.txt@{ui}
+                                @{i}werbung.txt@{ui}
+
+                    then you enter @{fg fill}STRIPFILE=S:STRIPS@{fg text} and all filenames listed
+                    inside this file where deleted from the archive. Look to
+                    the Chapter @{"Example-Stripfile" link "SAMPLE_STRIPFILE" 0} for further informations.
+
+                    @{u}NOTE:@{uu} If you are stripping from a @{fg shine}@{bg fill}ZIP-Archive@{fg text}@{bg back}, please don't
+                          wonder about errormessages comming from ZIP, these
+                          errors are normal, as ZIP prints out all filenames,
+                          which couldn't be found inside the archive to delete
+                          them...dunno know why this behavour exists, I can't
+                          suppress this warnings and therefor you have to live
+                          with this :(
+
+                    This Parameter is optional!
+
+     @{fg shine}@{bg shadow}PACKER=P/K@{fg text}@{bg back}  -  Here you must enter the path to the checker you want to use.
+                    I've tested it with @{b}LHA V1.50@{ub}, @{b}LZX V1.20@{ub} and @{b}Zip V2.0.1@{ub} but
+                    as I only uses standard commands and therefor there should
+                    be no problems when using different versions. To specify
+                    the packer for @{fg fill}LZX@{fg text}, you could write for example:
+
+                                     @{fg fill}PACKER=C:LZX@{fg text}
+
+                    For the Textfile option this parameter is not required and
+                    you may leave it away in Textmode.
+
+     @{fg shine}@{bg shadow}TYPE=T/K/A@{fg text}@{bg back}   - Enter here the type of packer which is used...currently
+                    there exists 3 types:
+
+                                @{fg shine}LHA LZX ZIP TXT@{fg text}
+
+                    If you want to use @{fg fill}LHA@{fg text}, simply enter @{fg fill}TYPE=LHA@{fg text} and
+                    mULTI-cHECK uses now the @{fg fill}LHA@{fg text} routines for stripping/testing
+                    and adding...
+
+                    This Parameter is absolutly needed, without it mULTI-cHECK
+                    won't work!
+
+ @{fg shine}@{bg shadow}NOMODIFY=NOM/S@{fg text}@{bg back}   - If you want to add a picture or any other binary as 
+                    advert to an archive please ALWAYS enter this parameter
+                    on the commandline, or your picture/binary/whatever will 
+                    be detroyed when added to the archive! That's because 
+                    mULTI-cHECK won't test the advert filetype for speed reasons 
+                    and without this switch it will try to add the upload data 
+                    into the binary, which of course destroys your addy :)
+                    So please keep this in mind when trying to add binary data!
+                    (New for V1.6+)
+
+
+
+     @{fg shine}@{bg shadow}FILENAME/A@{fg text}@{bg back}   - Here you specify the archive to test/add/strip. If you use
+                    mULTI-cHECK as Filechecker for your BBS, this Parameter will
+                    be filled out from the BBS, and therefor no Keyword is
+                    required to specify it (see @{"examples" link "USAGE_EXAMPLES" 0} below).
+
+                    This Parameter is absolutly needed, without it mULTI-cHECK
+                    won't work!
+
+                @{"Click here for some examples of mULTI-cHECK" link "USAGE_EXAMPLES" 0}
+@endnode
+
+@node "USAGE_EXAMPLES" "Some examples how to use mULTI-cHECK."
+                  @{b}SOME EXAMPLES HOW TO USE mULTI-cHECK:@{ub}
+
+ All examples listed here assuming that you have an advertfile called ADVERT
+ found in S: and a stripfile called STRIP found in S:, too.
+
+
+@{b}1)@{ub} @{u}Simplest usage:@{uu}
+
+  mULTI-cHECK PACKER=C:LHA TYPE=LHA RAM:MYARCHIVE.LHA
+
+ Will only check archive @{fg fill}RAM:MYARCHIVE.LHA@{fg text} in @{fg fill}LHA@{fg text} mode and uses @{fg fill}C:LHA@{fg text}.
+
+
+@{b}2)@{ub} @{u}With adding of an advert:@{uu}
+
+  mULTI-cHECK ADVERT=S:ADVERT PACKER=C:LZX TYPE=LZX RAM:MYARCHIVE.LZX
+
+ Will check archive @{fg fill}RAM:MYARCHIVE.LZX@{fg text} in @{fg fill}LZX@{fg text} mode using @{fg fill}C:LZX@{fg text} and after the
+ testing will add the @{fg fill}S:ADVERT@{fg text} file to the archive.
+
+
+@{b}3)@{ub} @{u}Stripping from an archive:@{uu}
+
+ mULTI-cHECK STRIPFILE=S:STRIP PACKER=C:ZIP TYPE=ZIP RAM:MSDOS.ZIP
+
+ Will check archive @{fg fill}RAM:MSDOS.ZIP@{fg text} in @{fg fill}ZIP@{fg text} mode using @{fg fill}C:ZIP@{fg text} and after testing,
+ all filenames listed in @{fg fill}S:STRIP@{fg text} will be stripped off the archive.
+
+
+@{b}4)@{ub} @{u}Now an example with testing/adding/stripping for a BBS-System:@{uu}
+
+ mULTI-cHECK ADVERT=S:ADVERT STRIPFILE=S:STRIP BBS-PATH=FAME: PACKER=C:ZIP
+             TYPE=ZIP RAM:MSDOS.ZIP
+
+
+@{b}5)@{ub} @{u}At least an example for the Textadding feature (V1.3):@{uu}
+
+ mULTI-cHECK ADVERT=S:HEADER.TXT TAILER=S:TAILER.TXT BBS-PATH=FAME: TYPE=TXT
+ RAM:ASCII.TXT
+
+ It's clear that you have to enter this in only one line, but the space here
+ doesn't allow it to write this example into one line. This example will
+ first test @{fg fill}RAM:MSDOS.ZIP@{fg text} in @{fg fill}ZIP@{fg text} mode using @{fg fill}c:ZIP@{fg text}, then strips off all files
+ contained in @{fg fill}S:STRIP@{fg text} from the archive and finally adds the advert @{fg fill}S:ADVERT@{fg text}
+ to the archive, but filling out the advert first with uploader's name, 
+ location etc. extracting this informations out of the BBS-Path @{fg fill}FAME:@{fg text} .
+
+@{b}6)@{ub} @{u}At least an example for the binary adding to archives feature (V1.6):@{uu}
+
+ mULTI-cHECK AD=S:advert.jpg BBS=FAME: T=LHA NOM RAM:test.lha
+
+ Here you will add the picture "S:advert.jpg" to the LHA archive
+ "RAM:test.lha" without trying to modify the advert (NOM switch).
+ This example also shows the abbrevations for all parameters passed
+ to mULTI-vIEW.
+
+ I think that should be enough examples on how to use it for your needs.
+
+ For an overview about the @{"StripFile" link "SAMPLE_STRIPFILE" 0} or the @{"Advert" link "SAMPLE_ADVERT" 0} format used by mULTI-cHECK
+ please take a look to the according chapters.
+@endnode
+
+@node "SAMPLE_ADVERT" "An example for an Advert used by mULTI-cHECK"
+                 @{b}SPECIAL COMMANDS USED FOR THE ADVERT:@{ub}
+
+ As mULTI-cHECK is able to add @{i}Uploader Name@{ui} and @{i}Location@{ui}, @{i}Node-Nr@{ui}, @{i}Date@{ui} and
+ @{i}Time@{ui} of the Upload into your advert, some special commands exists to let
+ mULTI-cHECK add this items. Here's a list of a special commands, you have
+ to enter them exactly the same way they are written here:
+
+@{b}1) The Uploadername:@{ub} @{fg shine}@{bg fill}-U-S-E-R-H-A-N-D-L-E-@{fg text}@{bg back}
+
+ Will be replaced by the name of the Uploader. Max length is 21 chars,
+ shorter names are filled with spaces, longer names are cutted. If no
+ uploadername could be found, the string "@{fg fill}-+- THE SYSOP -+-@{fg text}" will be added.
+
+@{b}2) The Uploaderlocation:@{ub} @{fg shine}@{bg fill}-U-S-E-R-L-O-C-A-T-I-O-N-@{fg text}@{bg back}
+
+ Will be replaced by the Location of the Uploader. Max. length is 25 chars,
+ shorter names are filled with spaces, longer names are cutted. If no
+ uploaderlocation could be found, the string "@{fg fill}-+- LOCAL UPLOAD -+-@{fg text}" will be
+ added.
+
+@{b}3) The Nodenumber:@{ub} @{fg shine}@{bg fill}¹¹@{fg text}@{bg back}
+
+ Will be replaced by the Nodenumber from where the upload was done. Max.
+ length is 2 chars, the nodenumber will be right-justified written to your
+ advert. If no nodenumber could be found, the string "@{fg fill}--@{fg text}" will be written
+ as Nodenumber.
+
+@{b}4) Date of check:@{ub} @{fg shine}@{bg fill}@@-@@-@@@{fg text}@{bg back}
+
+ Will be replaced by the date the archive was tested. The date is in the
+ USA format (@{fg fill}MM-DD-YY@{fg text}) and is always been added.
+
+@{b}5) Time of check:@{ub} @{fg shine}@{bg fill}##:##:##@{fg text}@{bg back}
+
+ Will be replaced by the time the archive was tested. The time is in the
+ format @{fg fill}HH:MM:SS@{fg text} and is always been added.
+
+
+
+                          @{b}SAMPLE FOR AN ADVERT:@{ub}
+
+@{fg shine}--- CUT HERE ---@{fg text}
+
+        _____ __ __ _____ __ _____.--.__ ________ ___________ __
+ __ _ _/  ._ \\_ |  \\_    \\__)     \\_ | _/        \\_ ___/     \\_ l_  _
+   \\ \\\\_  |/  / |  _/ |  _/\\_  l___/ | \\_  |  |  _/ _/\\_  |  _/ _/_ /_
+       |   __/  |  |  |  |  l__   |     |  |  |  |  |  |  |  |  |  |  ||
+       |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  l  |  |  |  l  |  |:
+       l__|  l_____l__|  l__l__   l__|  l__|__|  l__   l__|  l__   |  ||
+          ÷2F÷        `--'     `--'  `--'     `--'  `--'  `--'  `--'
+
+           · (tRSi-iNNOVATiONs) HQ & bETA sITE · fAME sUPPORT BBS ·
+
+                              __ _____ _____
+     A4ooo/o6o aT 5oMHZ      (__)     \\_    |
+                             | \\_  |  _/ l__|           sYSTEM-cHIEFS:
+   66mB rAM/20 GB HD-sPACE   |  |  |  |  |__
+                             |  |  |  |  l  |  _     SieGeL/tRSi & aRGON
+      2 x tELNET oNLY!       l__l__|  l__   | (_)
+                                   `--'  `--'
+
+          ! sUPPORTING pD and sHAREWARE oNLY oN aMIGA, PC & MAC !
+
+           gIVE iT a tRY - cONNECT tO telnet://siegel.dyndns.org
+
+             UPLOAD DATE: @@-@@-@@  TIME: ##:##:##  ON NODE: ¹¹
+
+    UPLOADER: -U-S-E-R-H-A-N-D-L-E-  LOCATION: -U-S-E-R-L-O-C-A-T-I-O-N-
+
+@{fg shine}--- CUT HERE ---@{fg text}
+@endnode
+
+@node "SAMPLE_STRIPFILE" "An example for a Stripfile used by mULTI-cHECK"
+             @{b}EXPLANATION FOR THE STRIPFILE USED BY mULTI-cHECK:@{ub}
+
+ If you want to let mULTI-cHECK automatically remove unused files from the
+ archives being tested, you have to create an ASCII-file containing all file-
+ names you wish to remove from the archive. mULTI-cHECK takes this file with
+ the Parameter @{"STRIPFILE=<PATH_TO_FILE>" link "USAGE" 0} and removes all files from the
+ archive wich matches the filenames found inside the stripfile. Please use
+ this option with care, as mULTI-cHECK performs @{b}NO@{ub} checkings about the given
+ filenames (i.e. Patterns, spaces between names etc.) for the use of speed.
+ It's on you to remove only @{i}LEGAL@{ui} filenames which doesn't create problems...
+ I'll give @{b}NO@{ub} warranty about any loss data which occures while removing files
+ from an archive with @{i}ILLEGAL@{ui} filenames!
+
+
+                       @{b}EXAMPLE FOR THE STRIPFILE:@{ub}
+
+ This is an example how a stripfile may look like. Snap this out and save it
+ under a filename of your choice. After this, enter STRIPFILE=<YOUR_NAME> as
+ parameter for mULTI-cHECK, and all files where removed then.
+
+@{fg shine}--- CUT HERE ---@{fg text}
+
+ display.me 
+ fucker.txt 
+ "the fastest" 
+ READ.ME 
+ "BLA BLA BLA!"
+
+@{fg shine}--- CUT HERE ---@{fg text}
+
+ Don't ask me to built in a learn function for new adverts, I won't built-in
+ such unsafe things, if you want to remove files, @{b}YOU@{ub} have to enter the
+ according filenames...I don't trust doors/checkers, which are able to 
+ "learn", as this produces at most cases empty archives....:|
+@endnode
+
+@node "CREDITZ" "Credits and the wellknown Greetings"
+                               @{b}THE GREETINGS:@{ub}
+
+                     @{i}SieGeL/tRSi sends his regards to:@{ui}
+
+ Strider        - FAME is still on Top, too bad that you stopped development  !
+ aRGON          - A must-have in all docs :)
+ dIGIMAN        - For running FAME forever ;)
+
+
+             @{fg shine}...and of course to all my registered users and@{fg text}
+                @{fg shine}everone I've forgot to listen here....@{fg text}
+
+
+                    @{b}@{fg shine}FAME - Final Amiga MailBox Engine !@{ub}@{fg text}
+
+        This checker is dedicated to this System, so go on and change now !
+
+   @{b}------------------------------------------------------------------------@{ub}
+
+    @{i}THE ONLY WAY TO MULTITASK ON MS-DOS IS TO RUN IBeM TWICE ON AN AMIGA !@{ui}
+@endnode
+
+@node "REGISTER" "Registration of Tools/Doors"
+@{b}REGISTER DOORS/TOOLS@{ub}
+
+ All tools I've made in the past are released under the @{b}RegisterWare@{ub} concept.
+ This means, that I release all my doors only one time as full working Public
+ Versions, all updates/bugfixings are only available for registered Users.
+
+ However, since a couple of years registration is no longer required, as I
+ put all my effort in freeware programming. Maybe on the new AmigaOne 
+ platform there will be some day some kind of tool/utility I will sell, we
+ will see...
+
+ I will release all my (Classic-) Amiga Software for free, no registration
+ is required. But I won't re-release all my doors at once, I will update
+ every door and put it in the public domain. So don't ask for releasedates,
+ just take a look now and then to the Aminet, you will see it there first!
+
+ You can also download all my doors by telnetting to the following address:
+
+ telnet://siegel.dyndns.org
+
+                   @{b}MEET YOU ON AMIGA-OS 4.x @ PPC :)@{ub}
+
+@endnode
+
+@node "FAME" "Informations about the FAME-System."
+
+                        @{b}Informations about FAME@{ub}
+
+ FAME is at this time still under construction, but because of the fact
+ that many people asked for FAME, it will be released until the end
+ of february under the concept of shareware and will be available for
+ everyone. At the begining not everything will be completly finished and
+ because of this not everything you can already configure will work.
+ The registered Versions have to work at least some days before they will
+ be released for registered Users, but it's still possible that these
+ versions also make problems when using them. But as soon as you've
+ reported those problems, they will be fixed!
+
+ If some of the settings won't work, it might be a bug but it's also (more)
+ possible that those functions are not implemented yet.
+
+ Some of the internal functions are currently untested and it's possible
+ that they produce errors or problems, but please remember the complexity
+ of FAME !
+
+ If you have questions or problems with FAME, please turn on one of the
+ FAME-Developers or ask Strider to solve your problems.
+
+
+@{b}@{u}What should FAME costs ?@{ub}@{uu}
+
+ NOTHING! F.A.M.E. is for FREE, GO DOWNLOAD IT AT AMINET!
+
+
+@{b}@{u}What is included in the FAME-package ?@{ub}@{uu}
+
+ Server, SystemEditor, MainPart, FAMEHydra.FIM, FAMEError.FIM
+
+ FAME.library FAMEChat.FIM programmed by Bloodrock
+
+ FAMEFullEd.FIM, FAMEScript.FIM programmed by Beatnik
+
+ MUI UserEditor, FAMEDoorHelp.FIM, FAMEInfo programmed by SieGeL/tRSi
+
+ Also some doors and tools from the FAME-Development-Team are included,
+ but this doors are only unregistered Versions and have therefor some
+ limitations. The registered Versions of those doors and the Informations
+ how to get them are available here in the pUNISHMENT iNC. BBS.
+
+ It could happen that some of the doors and tools listed here are currently
+ missing because there are currently under development !
+
+
+@{b}@{u}Who creates FAME ?@{ub}@{uu}
+
+@{fg fill}Main programmer:@{fg text}
+
+ - David 'Strider' Wettig  strider@strider.in-berlin.de
+
+@{fg fill}Additional programmer:@{fg text}
+
+ - Oliver 'Bloodrock' Lange  Bloodrock@bloody.in-berlin.de
+ - Ulrich Arne 'Beatnik' Jansen
+ - Sascha 'Siegel' Pfalz (tRSi) siegel@in-ovation.de
+
+@{fg fill}FAME-Development-Team:@{fg text}
+
+ - David 'Strider' Wettig  strider@strider.in-berlin.de
+ - Oliver 'Bloodrock' Lange  Bloodrock@bloody.in-berlin.de
+ - Ulrich Arne 'Beatnik' Jansen
+ - Sascha 'Siegel' Pfalz (tRSi) siegel@in-ovation.de
+ - Andreas 'ByteAndi' Petermann
+ - Dirk 'Spy' Holzkampf
+ - Bodo 'Dr.Dre!' Hoffmann (tRSi)
+
+
+@{b}@{u}Disclaimer:@{ub}@{uu}
+
+ No warranties are given. We take no responsibility of any possible harm this
+ product could do to your AMIGA system (not that it would but..).
+ We give also no warranties to any dokuments or doors/tools included with
+ FAME.
+ You use FAME and all FAME related files at your own risk !
+
+ Of course we take no responsibility when someone is using FAME for illegal
+ terms.
+ @{b}------------------------------------------------------------------[EOF]-----@{ub}
+@endnode
+
+@node HeddleyAutoIndex "Index"
+@remark Index auto-generated by Heddley
+Index of database mULTI-cHECK
+
+Documents
+
+@{"An example for a Stripfile used by mULTI-cHECK" link "SAMPLE_STRIPFILE"}
+@{"An example for an Advert used by mULTI-cHECK" link "SAMPLE_ADVERT"}
+@{"Copyright Informations for mULTI-cHECK" link "COPYRIGHT"}
+@{"Credits and the wellknown Greetings" link "CREDITZ"}
+@{"How to use it and list of Parameters" link "USAGE"}
+@{"Informations about the FAME-System." link "FAME"}
+@{"Installation to your BBS-System of mULTI-cHECK" link "INSTALLATION"}
+@{"mULTI-cHECK - Archive-Checker for FAME & Amiex Systems" link "Main"}
+@{"Registration of Tools/Doors" link "REGISTER"}
+@{"Some examples how to use mULTI-cHECK." link "USAGE_EXAMPLES"}
+@{"Some informations about mULTI-cHECK" link "INTRODUCTION"}
+
+Buttons
+
+@{"  CREDITS & GREETINGS!  " link "CREDITZ" 0}
+@{"  USAGE AND PARAMETERS  " link "USAGE" 0}
+@{"(CLICK HERE FOR OPTIONS)" link "USAGE" 0}
+@{"Advert" link "SAMPLE_ADVERT" 0}
+@{"ADVERT.TXT" link "SAMPLE_ADVERT" 0}
+@{"Click here for some examples of mULTI-cHECK" link "USAGE_EXAMPLES" 0}
+@{"COPYRIGHT & DISTRIBUTION" link "COPYRIGHT" 0}
+@{"Example-Stripfile" link "SAMPLE_STRIPFILE" 0}
+@{"examples" link "USAGE_EXAMPLES" 0}
+@{"FAME" link "FAME" 0}
+@{"FAME-System" link "FAME" 0}
+@{"HERE" link "SAMPLE_ADVERT" 0}
+@{"HERE" link "USAGE_EXAMPLES" 0}
+@{"Installation" link "INSTALLATION" 0}
+@{"INSTALLATION TO YOUR BBS" link "INSTALLATION" 0}
+@{"INTRODUCTION & FEATURES " link "INTRODUCTION" 0}
+@{"Parameters" link "USAGE" 0}
+@{"RegisterWare" link "REGISTER" 0}
+@{"stripfile" link "SAMPLE_STRIPFILE" 0}
+@{"STRIPFILE.TXT" link "SAMPLE_STRIPFILE" 0}
+@{"STRIPFILE=<PATH_TO_FILE>" link "USAGE" 0}
+@endnode

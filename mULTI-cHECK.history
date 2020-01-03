@@ -1,0 +1,92 @@
+-------------------------------------------------------------------------------
+          Program-History for mULTI-cHECK by Sascha 'SieGeL' Pfalz
+-------------------------------------------------------------------------------
+
+V1.0  (09-03-95)  - First complete Version, is able to to add an Advertisment
+                    with Uploader Name & Location, Nodenr, Date & Time of
+                    upload. Uses only Arguments without any configuration for
+                    faster working.
+
+V1.1  (09-11-95)  - Update, added new Argument 'PACKER=<packer>' . This is used
+                    to allow yout to select the location of your LZX including
+                    the name,i.e. PACKER=C:LZX . Without this Argument, the
+                    checker won't work!
+
+                   -Rewritten the adding-Routines, now faster and saves about
+                    300 Bytes :)
+
+                   *Changed the Name from LZXCheck to mULTI-cHECK, as I plan
+                    to support LHA and ZIP, too. Maybe sometimes an DMS-Check
+                    will be included, too.
+
+                   *Changed the Output of the checker.
+
+V1.2  (02-03-96)  - Update, currently only for me :)
+
+                   *Redesigned the whole output, uses now less ansi and also
+                    increased speed a little...
+
+                   +Now supports LHA, LZX & ZIP archives...in fact of this
+                    the whole command line had to be changed...see supplied
+                    document for further infos
+
+                   +Added the option to strip files from all archives. Simply
+                    enter STRIPFILE=<path_to_stripfile> and all filenames
+                    contained in this file will be deleted from the archive.
+                    ZIP is the only packer which writes an errormessage when
+                    you enter filenames for deleting, which are not present
+                    inside the checked archive...simply ignore them, i can't
+                    stop this output, as Zip writes itself on Console-output.
+
+                   -Found and fixed a memory eater, which costs 264 Bytes
+                    everytime you start it...
+
+      (02-09-96)  - PUBLIC RELEASE
+
+V1.3  (03-03-96)  - Internal Update
+
+                   -Rewritten the code to be more FAME compatible.
+
+      (09-06-96)   +Added Textfile support! Also new Argument Option added
+                    called TAILER/K. See docs for further details about this.
+
+                   -Changed the PACKER argument to PACKER/K, so it's not any
+                    longer required to pass this when using the TXT option.
+
+V1.4  (11-15-96)  - Very small update ;)
+
+                   -Fixed a little bug when adding the advert. The temporary
+                    created advert wasn't removed from T: after adding to
+                    LZX, LHA or Zip archives. Now fixed.
+
+V1.5  (11-21-96)  - Bigger update
+
+                   *BUG-REPORT FROM ENZO:
+                    mULTI-cHECK has not added the infos to the tailer when
+                    testing textfiles. Now fixed, mULTI-cHECK adds now to
+                    the header & the tailer the gained informations.
+
+                   +Built in a faster copyroutine for textfiles. This routine
+                    requires of course more memory, but if you doesn't have
+                    enough memory, mULTI-cHECK will copy the textfiles in
+                    line-copy mode, otherwise the whole file will be read at
+                    once and written at once, making the processing of text-
+                    files about 200% faster than previous versions!!!
+
+V1.6  (04-30-03)  - Small update (after 7 years?! :)
+
+                   *BUG-REPORT FROM DIGIMAN:
+                    When using a binary file as advert it was always destroyed
+                    after adding it to the archive. That's because the update
+                    function for inserting data always assumed TEXT Files that
+                    can be changed to be passed as adverts.
+                    To be able to insert binary data as adverts a new Command
+                    line option was added: NOMODIFY/S
+                    If this switch is set mULTI-cHECK won't try to modify the
+                    advert, instead it just put it into the archive as it is.
+                    If you ommit this parameter mULTI-cHECK will try to insert
+                    the uploader/location to your addy before adding it to the
+                    archive, which is the behavour in all previous versions.
+                    All arguments have now shortcuts, as the FAME systemeditor
+                    does not allow enough space for all args in their long form.
+-----------------------------------------------------------------------[EOF]---
